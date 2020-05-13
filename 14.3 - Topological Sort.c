@@ -6,13 +6,12 @@ int m[n][n]={0};
 int vis[n]={0};
 stack<int> s;
 void dfs(int i){
-		vis[i]=1;
-		for (int j=0;j<n;j++){
-			if (m[i][j] && !vis[j]){
-				dfs(j);
-			}
+	vis[i]=1;
+	for (int j=0;j<n;j++){
+		if (m[i][j] && !vis[j]){
+			dfs(j);
 		}
-
+	}
 	s.push(i);
 }
 
@@ -29,6 +28,5 @@ int main(){
 	for (int i=0;i<n;i++){
 		cout<< s.top()<<' ';
 		s.pop();
-
 	}
 }
